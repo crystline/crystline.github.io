@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WelcToCarrotChronicles</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+    <div class="bg"></div>
+
+    <header> 
+        <h1 class="animate__animated animate__slideInDown"id=title >
+            carrot <br>
+            chronicles
+        <h1>
+    </header>
+
+    <nav>
+        <ul class=TitleButtons.grp>
+            <li class=TitleButtons><a id=startButton href="CarrotChronicles_Page1.html" >start</a></li>
+            <li class=TitleButtons><a id=aboutButton href= >about</a></li>
+            <li class=TitleButtons><a id=contentsButton href="CarrotChronicles_ContentsPage.html" >contents</a></li>
+        </ul>
+    </nav>
+    
+    <div class=titleCarrotImage>
+        <img id=titleCarrot alt=titleCarrot src="carrotStoriesImages/title_carrot.svg">
+        <img id=titleCarrotBlink alt=titleCarrotblink src="carrotStoriesImages/title_carrot_blink.svg">
+    </div>
+
+    <div>
+        <img class="animate__animated animate__slideInDown" id=cloud alt=backgroundCloud src="carrotStoriesImages/cloud.svg">
+    </div>
+
+    <body scroll="no" style="overflow: hidden">
+    
+    <!-- USE ARROW KEYS TO SWITCH PAGE -->
+
+    <script>
+        document.onkeydown = arrowChecker;
+
+        function arrowChecker(e) {  
+            e = e || window.event;
+            if (e.keyCode == '39') { //right
+            document.location.href = "CarrotChronicles_Page1.html"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

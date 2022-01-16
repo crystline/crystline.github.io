@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id=title>CarrotChronicles_Page5</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+
+    <div class=container>
+
+        <img alt='light blue waves' id=wavesbg src='carrotStoriesImages/waves.svg'>
+
+        <!-- FISHING ROD IMAGE-->
+        <img alt='fishing rod with letter attached' id=fishingRod src='carrotStoriesImages/fishingRod.svg'>
+        
+
+
+        <!--BUBBLES-->
+        <img id=P5Bubble1 alt=bubble src="carrotStoriesImages/bubblev2.svg">
+        <img id=P5Bubble2 alt=bubble src="carrotStoriesImages/bubblev2.svg">
+
+
+
+        <p class=P5storyText>
+        Every Saturday, the truck would stop by a taco stand around lunchtime, and Celery would slip out the moment the door would open. Everyone would have lunch, with the sea breeze blowing in their faces and chilling their food too fast. 
+        <br><br>
+        Afterward the truck drivers would go fishing, and Celery would tag along, sometimes sitting in their bag and sometimes dashing about on the ground. A comfortable spot would be selected. Then, Celery would hand over a letter, and down it would be sent. 
+        </p>
+        <p class=P5storyText1>It came another day that the carrot received yet another letter from Celery. Despite it being delivered in an envelope that had the characteristics of any other ordinary letter casing, upon prying open the cream-coloured paper, the leaves on the carrot’s head straightened up with a shiver…
+        </p>
+    </div>
+
+<!-- CONFETTI-->
+    <div class=confetti>
+        <img alt='colourful gradient background with carrot' id=confettibackground src="carrotStoriesImages/confetti_carrot.jpeg">
+        <p id=P5storyText2 onclick="confetti">
+            ...as an enormous amount of confetti flooded to the floor in a grand eruption of colour. The astoundment left the carrot frozen, for the neon paints on the card were like lasers, and he felt as if he were confined within a dazzling disco ball. 
+
+            A little bit later, having regained his composure and cleaned up the glitter blanket from off the floor of his bubble, he headed over to make himself comfortable on the sushi sofa, and read the letter.
+        </p>
+    </div>
+
+
+
+    <script>
+        document.addEventListener('keydown', e => {
+            if(e.keyCode === 79){
+                document.getElementById('confettibackground').style.display = "block";
+                document.getElementById('P5storyText2').style.display = "block";
+            }
+        })
+    </script>
+<!-- 
+    <script>
+       document.addEventListener('keydown', function(event) {
+            if (event.code === 'KeyZ') {
+             document.getElementById('confettibackground').style.display = "none";
+             document.getElementById('P5storyText2').style.display = "none";
+            }
+         }
+       )
+    </script>  -->
+
+
+<!--NAVIGATION-->
+    <nav>
+        <div class=navigation>
+            <a class=back href="CarrotChronicles_Page4.html">back</a>
+            <a class=next href="CarrotChronicles_Page6.html">next</a>
+            <svg class=navbar>
+                <rect rx="30" ry="30" width="90vw" height="60" style="fill:#278D9B;" />
+            </svg>
+                <a href=CarrotChronicles_ContentsPage.html class=pageNumber id=Page></a>
+        </div>
+    </nav>
+
+    <script> /*Page number*/
+        const Title = document.getElementById("title").innerHTML;
+        document.getElementById('Page').innerHTML = Title.slice(-1);
+    </script>
+
+</body>
+
+
+</html>

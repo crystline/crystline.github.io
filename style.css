@@ -1,0 +1,838 @@
+:root {
+    --light:#6ab8c3;
+    --dark:#278D9B;
+    --darker: #0f535c;
+    --accent:#D68050;
+    --extralight:#D4EFF3;
+  }
+
+  ::selection {
+      color: white;
+      background: #D68050;
+  }
+
+
+  .bg {
+    background: linear-gradient(#ADDBE1, #98C9FF);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -5;
+  }
+
+/* html {
+    height:100vh;
+    width: 100vh;
+    background-image: linear-gradient(#ADDBE1, #98C9FF);
+} */
+
+
+.container {
+    width: 100vh;
+    height: 100vh;
+} 
+
+h1 {
+    color:var(--light);
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+}
+
+p {
+    font-family: 'Arvo', serif;
+    font-size: 15pt;
+    color: var(--dark)
+}
+
+.storyText1 {
+    width: 80vw; 
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    padding: 0;
+    position: absolute;
+    left: 5vw;
+    top:0;
+}
+
+.storyText2 {
+    width: 80vw; 
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: 0;
+}
+
+.question, .accent {
+    color: var(--accent);
+}
+
+.dark{
+    color: var(--dark);
+}
+
+.darker{
+    color: var(--darker);
+}
+
+
+/* .blankspace {
+    height: 50rem;
+    width: 100vw;
+    color:#075C68;
+    display: block;
+    
+}  */
+
+/* ANSWER BUTTONS  ---------------------------------------------- */
+
+/* ROW ANSWER  */
+.answerButtonsRow {
+    width: 100vw; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.answerButtonsRow li {
+    font-family: 'Arvo', serif;
+    font-size: 15pt;
+    color: #fff;
+    background-color: var(--dark);
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+/* COLUMN ANSWER  */
+
+.answerButtonsColumn {
+    width: 100vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.answerButtonsColumn li {
+    font-family: 'Arvo', serif;
+    font-size: 15pt;
+    color: #fff;
+    background-color: var(--dark);
+    text-align: center;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+
+/* Page One answers  */
+
+#answerButtons1 {
+    position: relative;
+    top: 40vh;
+}
+
+.answers1 {
+    border-radius: 30px;
+    margin: 10px;
+    padding: 20px;
+    width: 60px;
+}
+
+/* Page Two answers  */
+#answerButtons2 {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    padding: 0;
+    position: absolute;
+    left: 5vw;
+    top: 25em;
+}
+
+.answers2 {
+    border-radius: 30px;
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+}
+
+/* Page Three answers  */
+#answerButtons3 {
+    width:100vw;
+    margin: 0;
+    padding-bottom:0;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top:75rem;
+    flex-wrap: wrap;
+}
+
+.answers3 {
+    border-radius: 30px;
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+}
+
+
+.inlineAnswerButton {
+    color:white;
+    background-color:var(--dark);
+    border-radius: 2rem;
+    padding: 0 1rem 0;
+    margin: 0.5rem;
+}
+
+
+/* ANSWER BUTTON HOVER  --------------------------------------*/
+.answerButtonsRow li:hover {
+    background-color: var(--accent)
+} 
+
+.answerButtonsColumn li:hover {
+    background-color: var(--accent)
+} 
+
+.inlineAnswerButton:hover {
+    background-color: var(--accent)
+}
+
+
+
+
+
+
+
+/* ANSWER BUTTON RESPONSE */
+#response {
+    width: 100vw; 
+    position: relative;
+    top: 40vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+
+#response_palindrome {
+    width: 100vw; 
+    position: relative;
+    top: 27em;
+    left: 40vw;
+}
+
+
+/* PAGE NAVIGATION */
+
+.navbar {
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0;
+    position: fixed;
+    bottom:0;
+    left: 5vw;
+    z-index: 99;
+    overflow: visible;
+}
+
+/* .pageNumberCircle {
+    display:inline-block;
+    position: fixed;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0;
+    left: 50%;
+    bottom: 75px;
+} */
+
+
+.pageNumber {
+    color:var(--light);
+    border-radius: 2rem;
+    font-family: 'Fredoka One', cursive;
+    font-size: 24pt;
+    text-decoration: none;
+    text-align: center;
+    width: 4rem;
+    position: fixed;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0;
+    left: 50%;
+    bottom: 100px;
+    z-index: 100;
+}
+
+.pageNumber:hover {
+    background-color:#075C68;
+}
+
+.back, .next {
+    color:#fff;
+    font-family: 'Fredoka One', cursive;
+    font-size: 24pt;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 30pt;
+    width: 100pt;
+    padding: 20pt;
+    z-index: 100;
+}
+.back:hover, .next:hover {
+    background-color: var(--light);
+}
+
+.back {
+    position: fixed;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0;
+    left: 10%;
+    bottom: 100px;
+    z-index: 100;
+}
+.next {
+    position: fixed;
+    display: inline-block;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 0;
+    right: 10%;
+    bottom: 100px;
+    z-index: 100;
+}
+
+
+/*TITLE PAGE ------------------------------------------------------*/
+
+#title {
+    font-size: 112pt;
+    z-index: 1;
+    padding: 0pt;
+    margin: 0pt;
+    position: relative;
+    top: 5vh;
+    left: 60vh
+}
+
+/* Carrot Image  */
+.titleCarrotImage {
+    width: 70vh;
+    z-index: 2;
+    position: fixed;
+    top: 20vh;
+    left: 1vh;
+    display: inline-block;
+}
+
+#titleCarrotBlink {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.titleCarrotImage:hover #titleCarrotBlink {
+    display: inline;
+}
+
+
+/* Cloud */
+#cloud {
+    width: 90vh;
+    z-index: 0;
+    position: absolute;
+    top: 1vh;
+    left: 50vh
+}
+
+nav li {
+    list-style-type: none; /*removes bullets of list item*/
+    margin: 0;
+    padding: 0;
+    font-family: 'Fredoka One', cursive;
+    font-style: normal;
+    font-size: 50pt;
+    margin: 10pt 0pt;
+    position: relative;
+    bottom:-50pt;
+}
+
+
+/* START BUTTON*/
+#startButton {
+    color: #6ab8c3;
+    border-top-left-radius: 29pt;
+    border-bottom-left-radius: 29pt;
+    background-color: #075C68;
+    text-decoration: none; 
+    padding-left: 130pt;
+    padding-right: 100pt; 
+    margin: 1rem 0;
+
+    position: fixed;
+    right: 0;  
+    bottom: 36%;
+}
+#startButton:hover {
+    color: #fff;
+    background-color: #D68050;
+}
+
+/* ABOUT BUTTON*/
+#aboutButton {
+    text-decoration: none; /*removes underline of link*/
+    color: #6ab8c3;
+    border-top-left-radius: 29pt;
+    border-bottom-left-radius: 29pt;
+    background-color: #278D9B;
+    padding-left: 200pt;
+    padding-right: 100pt;
+    margin: 1rem 0;
+
+    position: fixed;
+    right: 0;  
+    bottom:23%;
+}
+#aboutButton:hover {
+    color: #6ab8c3;
+    background-color: #075C68;
+}
+
+/* CONTENTS BUTTON*/
+#contentsButton {
+    text-decoration: none; /*removes underline of link*/
+    color: #6ab8c3;
+    border-top-left-radius: 29pt;
+    border-bottom-left-radius: 29pt;
+    background-color: #278D9B;
+    padding-left: 230pt;
+    padding-right: 100pt;
+    margin: 1rem 0;
+    
+    position: fixed;
+    right: 0; 
+    bottom:10%; 
+}
+#contentsButton:hover {
+    color: #6ab8c3;
+    background-color: #075C68;
+}
+
+
+/* .TitleButtons.grp {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-end;
+    width: 100vw;
+    height: 30vh;
+}  */
+
+
+/* TO BE CONTINUED------------------------------------------------------*/
+
+#tbc {
+    display:flex;
+    margin: 10rem;
+    padding:1rem;
+    border-radius:12px;
+    background: white;
+    color: var(--dark);
+    justify-content: center;
+}
+
+
+
+/* CONTENTS PAGE------------------------------------------------------*/
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+#contentsTitle {
+    font-size: 7rem;
+    color:var(--dark);
+    padding: 0;
+    margin: 1rem;
+}
+
+.contentsList {
+    color:var(--dark);
+    text-align: center;
+    background-color:var(--extralight);
+    padding: 2rem 20rem 20rem;
+    margin: 1rem 10rem 10rem;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.contentsListItemGroup {
+    list-style-type: none;
+    line-height: 2em;
+    padding: 0;
+    margin:0;
+    z-index: 1;
+}
+
+.contentsListItem, #LinkTitle{
+    text-decoration: none;
+    font-family: 'Arvo', serif;
+    font-size: 15pt;
+    color: var(--dark);
+}
+
+.contentsListItem:hover {
+    color: var(--accent);
+}
+
+.bottomcenter {
+    width:100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#carrotHead {
+    height: 40vh;
+    position: fixed;
+    bottom:0;
+    z-index: 2;
+}
+
+#contentsBubble1 {
+    position: fixed;
+    right:15vw;
+    top: 5vh;
+    width: 20vw;
+    z-index: 2;
+}
+#contentsBubble2 {
+    position: fixed;
+    left:17vw;
+    top: 50vh;
+    width: 10vw;
+    z-index: 2;
+}
+
+.contentsList{
+    counter-reset: page;
+}
+
+.contentsListItem::before{
+    counter-increment: page;
+    content: "Page " counter(page);
+}
+
+/* PAGE ONE ------------------------------------------------------*/
+
+.container1 {
+    height: 100%;
+
+}
+
+#bg1 { 
+    height: 100vh;
+    margin: 0vh;
+    padding: 0vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+} 
+
+/* PAGE TWO ------------------------------------------------------*/
+
+#palindromeQuestion {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    padding: 0;
+    position: absolute;
+    left: 5vw;
+    top: 17em;
+    z-index: 2;
+}
+
+#astronautCarrot {
+    height: 100vh;
+    position: absolute;
+    top:20em;
+    right: 0;
+    margin: 0 auto 50rem;
+}
+
+#tbubble {
+    height: 15em;
+    position: absolute;
+    top: 30em;
+    left: 35vw;
+}
+
+/* PAGE THREE ------------------------------------------------------*/
+
+.sushiCarrotImage {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#sushiCarrotRelaxed {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.sushiCarrotImage:hover #sushiCarrotRelaxed {
+    display: inline;
+}
+
+.container3 {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+}
+
+#response_oxygen {
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#CeleryIntro {
+    position: relative;
+    top:20rem;
+    padding-bottom: 30rem;
+}
+
+.electrolyticCell {
+    padding:0;
+    margin:0;
+    width: 50rem;
+    height: 50rem;
+    background: url("carrotStoriesImages/electrolyticCell.svg") no-repeat;
+}
+
+.electrolyticCell:hover {
+    background: url("carrotStoriesImages/electrolyticCell_carrot.svg") no-repeat;
+}
+
+.electrolyticCellExplanation {
+    display:flex;
+    flex-direction: row;
+}
+
+.electrolyticCelltext {
+    width:50vw;
+    padding: 1rem;
+    margin: 3rem;
+}
+
+.greencorrect {
+    color:white;
+    background-color:yellowgreen;
+    border-radius: 2rem;
+    padding: 0 1rem 0;
+    margin: 0.5rem;
+}
+
+.redwrong {
+    color:white;
+    background-color:rgb(187, 91, 91);
+    border-radius: 2rem;
+    padding: 0 1rem 0;
+    margin: 0.5rem;
+}
+
+#anodeCathodeQuestion {
+    padding-bottom: 30vh;
+}
+
+
+/* PAGE FOUR ------------------------------------------------------*/
+
+#storyTextPage4 {
+    padding-top:3rem;
+}
+
+#storyTextPage4-2 {
+    padding-bottom:20rem;
+}
+
+.celeryboxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.celerybox1 {
+    padding:0;
+    margin:0;
+    width: 25rem;
+    height: 25rem;
+    background: url("carrotStoriesImages/celerybox_closed.svg") no-repeat;
+}
+
+.celerybox1:hover {
+    background: url("carrotStoriesImages/celerybox_empty.svg") no-repeat;
+}
+
+
+.celerybox2 {
+    padding:0;
+    margin:0;
+    width: 25rem;
+    height: 25rem;
+    background: url("carrotStoriesImages/celerybox_closed.svg") no-repeat;
+}
+
+.celerybox2:hover {
+    background: url("carrotStoriesImages/celerybox_open.svg") no-repeat;
+}
+
+
+/* PAGE FIVE ------------------------------------------------------*/
+
+.P5storyText{
+    padding: 5rem;
+    max-width: 40vw;
+    position: absolute;
+    top: 2vh;
+    left:0;
+    z-index:3;
+}
+
+.P5storyText1 {
+    padding: 5rem;
+    max-width: 30vw;
+    position: absolute;
+    right:0;
+    text-align: right;
+    color: var(--darker);
+    z-index:3;
+}
+
+#wavesbg {
+    min-width: 100vw;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    z-index: 1;
+}
+
+#fishingRod {
+    width:100vh; 
+    position: absolute;
+    right:0;
+    padding-bottom: 20vh;
+    z-index:3;
+}
+
+#P5Bubble1 {
+    position: relative;
+    top: 100vh;
+    left:0;
+    width: 20vw;
+}
+
+#P5Bubble2 {
+    position: relative;
+    top: 200vh;
+    left: 40vw;
+    width: 40vw;
+}
+
+#confettibackground{
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9;
+    display: none;
+}
+
+#P5storyText2 {
+    margin: 5rem;
+    padding:0.5rem;
+    border-radius: 2rem;
+    text-align: center;
+    color: white;
+    background: rgba(15, 83, 92, 0.7);
+    position: fixed;
+    top:20vh;
+    width: 50vw;
+    z-index: 10;
+    display: none;
+}
+
+/* PAGE SIX ------------------------------------------------------*/
+
+#letter {
+    color: var(--darker);
+    background: #fff3ed;
+    border-radius:2rem;
+    padding: 2rem;
+    margin: 5rem;
+}
+
+.answers6{
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    width: 10em;
+    text-align: center;
+}
+
+input {
+   padding: 12px 20px;
+   margin: 20px 20px 30vh;
+   width: 40vw;
+   box-sizing: border-box;
+   border: 3px var(--accent);
+   border-radius: 5px;
+   color: var(--dark);
+   background: var(--extralight);
+   font-size: 18px;
+   font-family: 'Arvo', serif;
+}
+
+input:focus {
+    background:white;
+}
+
+#P6questions {
+    margin: 5rem;
+}
+
+#hoursnum {
+    color: #fff;
+    background: var(--dark);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#hoursnum:focus {
+    background: var(--light);
+}

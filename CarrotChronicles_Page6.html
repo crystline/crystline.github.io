@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id=title>CarrotChronicles_Page6</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+
+    <div class=container3>
+        <p id=letter> 
+            To Carrot: <br>
+            You’re invited to Celery’s birthday party! <br><br>
+            
+            Venue: Sandcastle Beach<br>
+            Date: 23 April, Saturday<br>
+            Time: 4.20pm to 8.40pm <br><br>
+            
+            Dinner and cake will be served (although I don’t suppose carrots eat cake all that often). Hope to see you there! 
+            <br><br>
+            Love, <br>
+            Celery
+        </p> 
+
+    </div>
+
+    <div class=container3 id=P6questions>
+        <p class=question>How long would the party last?</p>
+
+        <p><span id='hoursnum' tabindex="0"></span>hours <span id='minutesnum'></span> minutes</p>
+
+    <script>
+    let resEle = document.getElementById("hoursnum");
+    let a = 0;
+    resEle.innerHTML = a;
+
+    document.body.addEventListener("keydown", (event) => {
+        if (event.keyCode === 38) {
+            resEle.innerHTML = ++a;
+        }
+        else if (event.keyCode === 40) {
+            resEle.innerHTML = --a;
+        }
+    });
+
+    document.addEventListener(" ")
+
+
+    function checkanswerP6(){
+        if (resEle === 4){
+            
+        }
+    }
+    
+    </script>
+
+
+
+        <p class=question>There was exactly a week to Celery's party. What day did the carrot receive the letter?</p>
+        <input id='saturday' class=textanswer type="text" placeholder="type your answer here and press enter">
+
+    </div>
+
+    <!-- CHECK ANSWER FOR TEXT INPUT - SATURDAY -->
+
+<script>
+
+    document.addEventListener('keydown', e =>
+    {
+    if(e.keyCode === 13){
+        var answer =document.getElementById("saturday").value;
+        if(answer === 'saturday' || answer === 'Saturday') 
+        {
+            document.getElementById('saturday').style.background = 'yellowgreen';
+            document.getElementById('saturday').style.color = '#fff';
+        } else if(answer==="") {
+            document.getElementById('saturday').style.background = 'var(--extralight)';
+            document.getElementById('saturday').style.color = 'var(--dark)';
+        }
+        else {
+            document.getElementById('saturday').style.background = '#bb5b5b';
+            document.getElementById('saturday').style.color = '#fff';
+            }
+      }
+    })
+
+</script>
+
+
+    <nav>
+        <div class=navigation>
+            <a class=back href="CarrotChronicles_Page5.html">back</a>
+            <a class=next href="CarrotChronicles_Page7.html">next</a>
+            <svg class=navbar>
+                <rect rx="30" ry="30" width="90vw" height="60" style="fill:#278D9B;" />
+            </svg>
+                <a href=CarrotChronicles_ContentsPage.html class=pageNumber id=Page></a>
+        </div>
+    </nav>
+
+    <script> /*Page number*/
+        const Title = document.getElementById("title").innerHTML;
+        document.getElementById('Page').innerHTML = Title.slice(-1);
+    </script>
+    
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id=title>CarrotChronicles_Page1</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<div class="bg"></div>
+
+<div class=container1>
+<body>
+    <div class=storyText1>
+        <p>  As a lot of stories start, this tale begins with a main character. In this particular story our protagonist happens to be a crunchy, excitable, rather amiable, carrot. Yes, a carrot. 
+        Not a white carrot or a purple carrot or a green carrot. This carrot was one the colour of a tiger, a spark of fire, the shade of amber.</p>
+        <p>In other words, orange. <span class=question>What is the complementary colour of orange?</span></p>
+        <p id=test>test</p>
+    </div>
+
+    <div>
+        <img id=bg1 alt=background src="carrotStoriesImages/page1bg.svg">
+    </div> 
+
+    <div>
+        <ul id=answerButtons1 class="answerButtonsRow">
+            <li class=answers1><a id=redButton>red</a></li>
+            <li class=answers1><a id=orangeButton>orange</a></li>
+            <li class=answers1><a id=yellowButton>yellow</a></li>
+            <li class=answers1><a id=blueButton onclick="response_correct()">blue</a></li>
+            <li class=answers1><a id=greenButton>green</a></li>
+        </ul>
+    </div>
+
+
+
+    <p id="response"></p>
+
+<script>
+// Correct answer
+document.getElementById("blueButton").onclick = function() {correctanswer()};
+
+function correctanswer() {
+  document.getElementById("response").innerHTML = "yay that's correct!";
+}
+
+// Wrong answer
+document.getElementById("redButton").onclick = function() {wronganswer()};
+document.getElementById("orangeButton").onclick = function() {wronganswer()};
+document.getElementById("yellowButton").onclick = function() {wronganswer()};
+document.getElementById("greenButton").onclick = function() {wronganswer()};
+
+function wronganswer() {
+  document.getElementById("response").innerHTML = "try again! Complementary colours are opposite <br>each other on the colour wheel.";
+}
+</script>
+
+
+
+<!-- navigation 
+    <nav>
+        <div class=navigation>
+            <a class=back href="CarrotChronicles_TitlePage.html">back</a>
+            <a class=next href="CarrotChronicles_Page2.html">next</a>
+
+            <svg class=navbar>
+                <rect rx="30" ry="30" width="90vw" height="60" style="fill:#278D9B;" />
+            </svg>
+                <a href=CarrotChronicles_ContentsPage.html class=pageNumber id=Page1>1</a>
+        </div>
+    </nav>-->
+
+    <nav>
+        <div class=navigation>
+            <a class=back href="CarrotChronicles_TitlePage.html">back</a>
+            <a class=next href=CarrotChronicles_Page2.html>next</a>
+
+            <svg class=navbar>
+                <rect rx="30" ry="30" width="90vw" height="60" style="fill:#278D9B;" />
+            </svg>
+                <a href=CarrotChronicles_ContentsPage.html class=pageNumber id=Page></a>
+        </div>
+    </nav>
+
+    <body scroll="no" style="overflow: hidden">
+
+<!-- PAGE NUMBER BASED ON DOCUMENT TITLE -->
+    <script>
+        const Title = document.getElementById("title").innerHTML;
+        document.getElementById('Page').innerHTML = Title.slice(-1);
+
+
+        document.getElementById('next').href = "CarrotChronicles_Page" +Title.slice(-1)+".html"
+    </script>
+
+<!-- USE ARROW KEYS TO SWITCH PAGE -->
+
+        <script>
+            document.onkeydown = arrowChecker;
+
+            function arrowChecker(e) {  
+                e = e || window.event;
+                if (e.keyCode == '37') { //left
+                    document.location.href = "CarrotChronicles_TitlePage.html";
+                }
+                else if (e.keyCode == '39') { //right
+                document.location.href = "CarrotChronicles_Page2.html"
+                }
+            }
+        </script>
+</body>
+</div>
+
+</html>

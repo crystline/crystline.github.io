@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id=title>CarrotChronicles_Page2</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg"></div>
+    
+    <!-- Story Text -->
+ 
+     <div class=storyText1>
+
+        <div>
+            <p>This carrot was surrounded by blue, for it lived at the bottom of the sea. It wasn’t an extremely deep part of the sea, for in that case our dear carrot would have been engulfed in black instead of blue. It was a part of the sea that was still a little warm, and still a little blue, where the sun trickled down and washed a dancing net of light onto the sand upon which the carrot lived.</p>
+            <p>That sand was lovely and soft and smooth, absolutely perfect for the carrot. If the sand had been bumpy, the bubble in which the carrot lived might have gone ‘pop!’, and that would have amounted to unspeakable trouble. Getting the bubble replaced was a task the carrot was not in the least keen on. 
+            </p>
+            <p>He would have to stick his head in one of the bubble fragments his bubble might leave behind, and go about his business like an astronaut.
+            </p>
+        </div>
+
+        <div>
+            <img id=astronautCarrot alt="astronaut carrot" src="carrotStoriesImages/astronaut_carrot.svg">
+        </div>
+    </div>
+
+
+
+        <div>
+            <p id=palindromeQuestion class=question> What do you call a word like ‘pop’, that can be read the same backward and forward? </p>
+        </div>
+
+    <div>
+        <ul id="answerButtons2" class="answerButtonsColumn">
+            <li class=answers2><a id=poppadomButton>poppadom</a></li>
+            <li class=answers2><a id=papillomaButton>papilloma</a></li>
+            <li class=answers2><a id=palindromeButton>palindrome</a></li>
+            <li class=answers2><a id=papyrusButton>papyrus</a></li>
+            <li class=answers2><a id=pilomotorButton>pilomotor</a></li>
+        </ul>
+    </div>
+
+    <p id="response_palindrome"></p>
+
+    <img alt='translucent bubble' id=tbubble src="carrotStoriesImages/bubblev2.svg">
+
+
+    <script>
+        // Correct answer
+        document.getElementById("palindromeButton").onclick = function() {correctanswer2()};
+        
+        function correctanswer2() {
+          document.getElementById("response_palindrome").innerHTML = "yay <br> that's correct!";
+          document.getElementById("astronautCarrot").src = "carrotStoriesImages/astronaut_carrot_happy.svg";
+        }
+        
+        // Wrong answer
+        document.getElementById("poppadomButton").onclick = function() {wronganswer2()};
+        document.getElementById("papillomaButton").onclick = function() {wronganswer2()};
+        document.getElementById("papyrusButton").onclick = function() {wronganswer2()};
+        document.getElementById("pilomotorButton").onclick = function() {wronganswer2()};
+        
+        function wronganswer2() {
+          document.getElementById("response_palindrome").innerHTML = "try again!";
+          document.getElementById("astronautCarrot").src = "carrotStoriesImages/astronaut_carrot.svg";
+
+        }
+        </script>
+
+
+
+
+
+
+    <!-- navigation -->
+
+    <nav>
+        <div class=navigation>
+            <a class=back href="CarrotChronicles_Page1.html">back</a>
+            <a class=next href="CarrotChronicles_Page3.html">next</a>
+                <a href=CarrotChronicles_ContentsPage.html class=pageNumber id=Page></a>
+            <svg class=navbar>
+                <rect rx="30" ry="30" width="90vw" height="60" style="fill:#278D9B;" />
+            </svg>
+                
+        </div>
+    </nav>
+
+    <script> /*Page number*/
+        const Title = document.getElementById("title").innerHTML;
+        document.getElementById('Page').innerHTML = Title.slice(-1);
+    </script>
+
+    <script>
+        document.onkeydown = arrowChecker;
+
+        function arrowChecker(e) {  
+            e = e || window.event;
+            if (e.keyCode == '37') { //left
+                document.location.href = "CarrotChronicles_Page1.html";
+            }
+            else if (e.keyCode == '39') { //right
+            document.location.href = "CarrotChronicles_Page3.html"
+            }
+        }
+    </script>
+
+</body>
+</html>
