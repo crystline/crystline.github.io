@@ -76,6 +76,11 @@ p {
     color: var(--darker);
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+}
 
 /* .blankspace {
     height: 50rem;
@@ -825,14 +830,17 @@ input:focus {
     margin: 5rem;
 }
 
-#hoursnum {
+.inputP6 {
     color: #fff;
     background: var(--dark);
-    padding: 20px;
+    padding: 10px;
     margin: 10px;
     border-radius: 5px;
+    font-family: 'Arvo', serif;
+    font-size: 15pt;
+    width: 70px;
 }
 
-#hoursnum:focus {
+.inputP6:focus {
     background: var(--light);
 }
