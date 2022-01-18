@@ -443,6 +443,43 @@ nav li {
 }  */
 
 
+/* ABOUT -------------------------------------------------- */
+.about {
+    color: var(--darker);
+    background: var(--extralight);
+    border-radius:2rem;
+    padding: 2rem;
+    margin: 5rem;
+}
+
+.aboutbuttons {
+    background: var(--dark);
+    color: white;
+    font-family: 'Arvo', serif;
+    font-size: 15pt;
+    text-align: center;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.aboutbuttons:hover {
+    background: white;
+    color: var(--darker);
+}
+
+#startstory {
+    background: var(--accent);
+    color: white;
+}
+
+#startstory:hover {
+    background: white;
+    color: var(--accent);;
+}
+
+
 /* TO BE CONTINUED------------------------------------------------------*/
 
 #tbc {
